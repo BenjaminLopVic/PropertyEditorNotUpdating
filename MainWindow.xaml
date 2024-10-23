@@ -1,0 +1,15 @@
+﻿<Window x:Class="PropertyEditorNotUpdating.MainWindow" x:Name="this"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PropertyEditorNotUpdating" xmlns:grids="http://schemas.actiprosoftware.com/winfx/xaml/grids"
+        mc:Ignorable="d" DataContext="{Binding ElementName=this}"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DockPanel>
+            <Button Content="Change !" DockPanel.Dock="Left" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="10,2" Click="Button_Click"/>
+            <grids:PropertyGrid DataFactory="{Binding DataFactory}" DataObject="{Binding TestDataObject}"/>
+        </DockPanel>
+    </Grid>
+</Window>
